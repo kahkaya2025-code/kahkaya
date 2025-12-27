@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kahkaya</title>
+
+<style>
+body{
+    margin:0;
+    font-family: Arial, sans-serif;
+    background:#f5f5f5;
+}
+
+/* ===== Animations ===== */
+@keyframes fadeDown {
+    0% { opacity:0; transform: translateY(-50px); }
+    100% { opacity:1; transform: translateY(0); }
+}
+@keyframes pulse {
+    0%{ transform:scale(1); }
+    50%{ transform:scale(1.2); }
+    100%{ transform:scale(1); }
+}
+@keyframes fadeUp {
+    0% { opacity:0; transform: translateY(30px); }
+    100% { opacity:1; transform: translateY(0); }
+}
+
+/* ===== Header ===== */
+.header{
+    text-align:center;
+    padding:40px 10px;
+    background:#fff;
+}
+.name{
+    font-size:48px;
+    font-weight:bold;
+    opacity:0;                    
+    animation: fadeDown 1.2s ease forwards;
+}
+.name span{
+    color:#8b5a2b;
+    display:inline-block;
+    animation: pulse 1.5s infinite;
+}
+.slogan{
+    margin-top:10px;
+    font-size:20px;
+    color:#555;
+    opacity:0;
+    animation: fadeUp 1.5s ease forwards;
+    animation-delay:1.3s;
+}
+
+/* ===== Menu ===== */
+.menu{
+    max-width:850px;
+    margin:20px auto;
+    padding:10px;
+}
+.section{
+    background:#fff;
+    margin-bottom:20px;
+    padding:15px;
+    border-radius:12px;
+    opacity:0;
+    transform: translateY(40px);
+    animation: fadeUp 1s ease forwards;
+}
+.section:nth-child(1){ animation-delay:1.5s; }
+.section:nth-child(2){ animation-delay:1.7s; }
+.section:nth-child(3){ animation-delay:1.9s; }
+.section:nth-child(4){ animation-delay:2.1s; }
+.section:nth-child(5){ animation-delay:2.3s; }
+.section:nth-child(6){ animation-delay:2.5s; }
+.section:nth-child(7){ animation-delay:2.7s; }
+
+.section h2{
+    margin-top:0;
+    border-bottom:2px solid #ddd;
+    padding-bottom:8px;
+}
+.item{
+    display:flex;
+    justify-content:space-between;
+    padding:8px 0;
+    border-bottom:1px dashed #ccc;
+}
+.item:last-child{
+    border-bottom:none;
+}
+.price{
+    font-weight:bold;
+}
+</style>
+</head>
+
+<body>
+
+<!-- العنوان -->
+<div class="header">
+    <div class="name">Ka<span>ح</span>kaya</div>
+    <div class="slogan">لكل قطمة حكاية</div>
+</div>
+
+<!-- المنيو -->
+<div class="menu">
+
+    <!-- بسكويت -->
+    <div class="section">
+        <h2> بسكويت</h2>
+        <div class="item"><span>بسكويت زبدة فانيليا</span><span class="price">210</span></div>
+        <div class="item"><span>بسكويت زبدة شوكولاتة</span><span class="price">210</span></div>
+        <div class="item"><span>بسكويت زبدة نسكافية</span><span class="price">210</span></div>
+        <div class="item"><span>بسكويت قهوة</span><span class="price">330</span></div>
+        <div class="item"><span>بسكويت ميلكا</span><span class="price">300</span></div>
+        <div class="item"><span>بسكويت قرفة</span><span class="price">250</span></div>
+    </div>
+
+    <!-- كحك وغريبة -->
+    <div class="section">
+        <h2>كحك و غريبة</h2>
+        <div class="item"><span>كحك سادة</span><span class="price">220</span></div>
+        <div class="item"><span>كحك عجوة</span><span class="price">220</span></div>
+        <div class="item"><span>كحك ملبن</span><span class="price">220</span></div>
+        <div class="item"><span>كحك عين جمل</span><span class="price">260</span></div>
+        <div class="item"><span>غريبة بالسمن البلدي</span><span class="price">450</span></div>
+    </div>
+
+    <!-- قراقيش -->
+    <div class="section">
+        <h2> قراقيش</h2>
+        <div class="item"><span>قراقيش سادة</span><span class="price">200</span></div>
+        <div class="item"><span>قراقيش عجوة</span><span class="price">200</span></div>
+    </div>
+
+    <!-- بيتي فور وسابلية -->
+    <div class="section">
+        <div class="item"><span>بيتي فور فانيليا</span><span class="price">270</span></div>
+        <div class="item"><span>بيتي فور شوكولاته</span><span class="price">270</span></div>
+   <div class="item"><span>تارت </span>
+      <span class="price">300</span></div>
+        <div class="item"><span>سابلية</span><span class="price">300</span></div>
+        <div class="item"><span>سابلية بونبون</span><span class="price">350</span></div>
+        <div class="item"><span>جوزيه</span><span class="price">350</span></div>
+        <div class="item"><span>بيمبو</span><span class="price">300</span></div>
+    </div>
+
+    <!-- شوكولاتة -->
+    <div class="section">
+        <h2> شوكولاتة</h2>
+        <div class="item"><span>شوكولاته روشية</span><span class="price">400</span></div>
+        <div class="item"><span>شوكولاته رفايللو</span><span class="price">400</span></div>
+    </div>
+
+    <!-- كوكيز -->
+    <div class="section">
+        <h2>🍪 كوكيز</h2>
+        <div class="item"><span>كوكيز فانيليا</span><span class="price">250</span></div>
+        <div class="item"><span>كوكيز شوكولاتة</span><span class="price">250</span></div>
+        <div class="item"><span>كوكيز حشوات</span><span class="price">300</span></div>
+    </div>
+
+    <!-- دونات -->
+    <div class="section">
+        <h2>🍩 دونات</h2>
+        <div class="item"><span>دونات (علبة ١٠ قطع)</span><span class="price">100</span></div>
+    </div>
+
+    <!-- المشكل -->
+    <div class="section">
+        <h2>🎁 المشكل</h2>
+
+        <div class="item">
+            <span>نصف مشكل 1</span>
+            <span class="price">120</span>
+        </div>
+        <div style="font-size:14px; color:#777; margin-bottom:8px;">بسكويت زبدة / كحك سادة / بيتي فور</div>
+
+        <div class="item">
+            <span>نصف مشكل 2</span>
+            <span class="price">150</span>
+        </div>
+        <div style="font-size:14px; color:#777; margin-bottom:8px;">بسكويت قهوة / بسكويت ميلكا / بسكويت قرفة</div>
+
+        <div class="item">
+            <span>نصف مشكل 3</span>
+            <span class="price">185</span>
+        </div>
+        <div style="font-size:14px; color:#777; margin-bottom:8px;">روشيه / رفايللو / سابلية بونبون / جوزية</div>
+
+        <div class="item">
+            <span>نصف مشكل 4</span>
+            <span class="price">145</span>
+        </div>
+        <div style="font-size:14px; color:#777; margin-bottom:8px;">كوكيز / كوكيز حشوات / بيمبو</div>
+    </div>
+
+</div>
+
+</body>
+</html>
